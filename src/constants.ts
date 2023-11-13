@@ -10,7 +10,8 @@ export interface CurrencyDetalisation {
 }
 
 export const AVALIABLE_NOMINALS: Record<Currency, CurrencyDetalisation[]> = {
-	RUB: [{nominal: 50, limit: 5},
+	RUB: [
+		{nominal: 50, limit: 5},
 		{nominal: 100, limit: 1},
 		{nominal: 500, limit: 2},
 		{nominal:1000, limit: 1},
