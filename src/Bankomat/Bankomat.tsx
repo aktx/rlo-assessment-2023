@@ -32,22 +32,6 @@ export const Bankomat = () => {
 			}
 			return acc;
 		}, [] as string[]);
-		// const s = [];
-		// for (let i = b.length - 1; i > -1; i--) {
-		// 	const [nominal, limit] = Object.entries(b[i])[0];
-		// 	console.log("-> nominal", nominal, limit);
-		// 	if (a / +nominal >= 1) {
-		// 		if (a / +nominal <= limit) {
-		// 			s.push(`${nominal}*${Math.floor(a / +nominal)}`)
-		// 			a -= +nominal * Math.floor(a / +nominal);
-		// 		} else {
-		// 			if (limit) {
-		// 				s.push(`${nominal}*${limit}`)
-		// 				a -= +nominal * limit;
-		// 			}
-		// 		}
-		// 	}
-		// }
 		if (a) {
 			setResult('Не получилось :(');
 		} else {
