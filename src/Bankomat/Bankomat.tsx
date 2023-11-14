@@ -23,9 +23,8 @@ export const Bankomat = () => {
 		console.log(selectedCurrency, inputValue);
 		let a = +inputValue;
 		const currentCurrency = AVALIABLE_NOMINALS[selectedCurrency];
-		const r = currentCurrency.reverse().reduce((acc, {nominal, limit}) => {
+		const r = [...currentCurrency].reverse().reduce((acc, {nominal, limit}) => {
 			const maxAvaliableCurrency = Math.min(Math.floor(a / nominal), limit);
-			console.log("-> maxAvaliableCurrency", maxAvaliableCurrency, a, nominal, limit, a / nominal);
 			if (a / nominal >= 1) {
 				a -= nominal * maxAvaliableCurrency;
 				return [...acc, `${nominal}*${maxAvaliableCurrency}`]
